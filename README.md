@@ -7,8 +7,8 @@
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- [Project Architecture](#project-structure)
-- [Project Structure](#project-architecture)
+- [Project Architecture](#project-architecture)
+- [Project Structure](#project-structure)
 - [Tools & Technologies](#tools--technologies)
 - [Features](#features)
 - [Dashboard Preview](#dashboard-preview)
@@ -116,7 +116,7 @@ digital-finance-automation/
 ![Power BI](dashboard/1.finance_dashboard.png)
 
 ### Page 2 — Detailed Analysis
-![Power BI](dashboard/2.finance_dashboard.png)
+![Power BI](dashboard/2. finance_dashboard.png)
 
 ### AI Agent in Action
 
