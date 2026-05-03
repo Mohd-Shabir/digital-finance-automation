@@ -64,6 +64,7 @@ digital-finance-automation/
 │
 ├── data/
 │   └── finance_dataset.xlsx
+│   ├── generate_dataset.py
 │
 ├── LICENSE
 └── README.md
