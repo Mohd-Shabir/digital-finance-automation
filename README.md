@@ -84,16 +84,15 @@ This project replaces that manual workflow with a fully automated, AI-powered fi
 ## Dashboard Preview
 
 ### Page 1 — Executive Overview
-> *(Add screenshot here)*
+![Power BI](dashboard/1.finance_dashboard.png)
 
 ### Page 2 — Detailed Analysis
-> *(Add screenshot here)*
+![Power BI](dashboard/1.finance_dashboard.png)
 
 ### AI Agent in Action
-> *(Add screenshot here)*
 
-### Demo Video
-> [Watch full demo on Loom](#) *(Add your Loom link here)*
+
+
 
 ---
 
