@@ -91,7 +91,9 @@ This project replaces that manual workflow with a fully automated, AI-powered fi
 
 ### AI Agent in Action
 
-
+| Details | Knowledge | Suggested Prompts | Agent Test | Agent Test |
+|---|---|---|---|---|
+| ![Details](agent/details.png) | ![knowledge](agent/knowledge.png) | ![Suggested Prompts](agent/suggested_prompts.png) | ![test](agent/test.png) |![test2](agent/test2.png) |
 
 
 ---
