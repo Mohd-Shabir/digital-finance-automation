@@ -116,7 +116,7 @@ digital-finance-automation/
 ![Power BI](dashboard/1.finance_dashboard.png)
 
 ### Page 2 — Detailed Analysis
-![Power BI](dashboard/2. finance_dashboard.png)
+![Power BI](dashboard/2.finance_dashboard.png)
 
 ### AI Agent in Action
 
