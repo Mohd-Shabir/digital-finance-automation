@@ -7,7 +7,8 @@
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- [Project Architecture](#project-architecture)
+- [Project Architecture](#project-structure)
+- [Project Structure](#project-architecture)
 - [Tools & Technologies](#tools--technologies)
 - [Features](#features)
 - [Dashboard Preview](#dashboard-preview)
@@ -18,6 +19,7 @@
 - [Limitations](#limitations)
 - [Key Insights](#key-insights)
 - [Skills Demonstrated](#skills-demonstrated)
+- [Future Enhancements](#Future-Enhancements)
 
 
 ---
@@ -40,8 +42,32 @@ This project replaces that manual workflow with a fully automated, AI-powered fi
 ![Project Architecture](assets/architecture.png)
 
 ---
-
-
+## Project Structure
+```
+digital-finance-automation/
+│
+├── agent/
+│   ├── details.png
+│   ├── knowledge.png
+│   ├── suggested_prompts.png
+│   ├── test.png
+│   └── test2.png
+│
+├── assets/
+│   └── architecture.png
+│
+├── dashboard/
+│   ├── 1.finance_dashboard.png
+│   ├── 2.finance_dashboard.png
+│   ├── finance_dashboard.pbix
+│   └── finance_dashboard.pdf
+│
+├── data/
+│   └── finance_dataset.xlsx
+│
+├── LICENSE
+└── README.md
+```
 ---
 
 ## Tools & Technologies
@@ -80,7 +106,7 @@ This project replaces that manual workflow with a fully automated, AI-powered fi
 - Daily scheduled trigger
 - Reads Department Summary data from Excel
 - Sends automated email alert listing over-budget departments
-- *(Note: Full Excel connector integration blocked by university DLP policy — see Limitations)*
+- *(Note: Full Excel connector integration blocked by DLP policy — see Limitations)*
 
 ---
 
@@ -90,7 +116,7 @@ This project replaces that manual workflow with a fully automated, AI-powered fi
 ![Power BI](dashboard/1.finance_dashboard.png)
 
 ### Page 2 — Detailed Analysis
-![Power BI](dashboard/1.finance_dashboard.png)
+![Power BI](dashboard/2.finance_dashboard.png)
 
 ### AI Agent in Action
 
@@ -157,6 +183,7 @@ A Copilot Studio agent is configured with the finance dataset as its knowledge s
 
 **4. Automation Layer**
 Power Automate runs a daily scheduled flow that reads the Department Summary sheet, checks for over-budget departments, and sends an automated email alert to the finance team.
+Note: Full deployment was limited by account-level DLP policy restrictions.
 
 ---
 
@@ -165,23 +192,35 @@ Power Automate runs a daily scheduled flow that reads the Department Summary she
 Example questions the Finance Agent can answer:
 
 ```
-User: Which departments are over budget?
+## AI Agent Demo
 
-Agent: Based on the latest consolidated financial data, the departments 
-currently over budget are:
+Example of the Finance Agent answering a real query:
 
-• HR: Overspent by approximately $47,993 (about 26% over)
-• Sales: Overspent by about $130,341 (around 24% over)
-• Finance dept: Overspent by $22,989 (roughly 10% over)
-• Marketing: Overspent by $41,029 (around 13% over)
+**User:**
+> Which departments are over budget?
 
-Engineering, IT, Operations, and Legal remain within or under budget.
-Would you like a detailed variance report?
+**Finance Assistant:**
+> Based on the latest financial summary, the following departments 
+> are over budget:
+>
+> - **HR:** Over by $47,993.63
+> - **Finance:** Over by $22,989.77
+> - **Marketing:** Over by $41,029.75
+> - **Sales:** Over by $130,341.40
+>
+> Among these, Sales has the highest over-budget amount, followed 
+> by HR and Marketing.
+
+*The agent reads directly from the live Excel knowledge base and 
+responds in natural language — no manual reporting required.*
 ```
+
 
 ---
 
 ## Automation Flow
+
+Note: Full deployment was limited by account-level DLP policy restrictions.
 
 The Power Automate Budget Alert Flow consists of 3 steps:
 
@@ -201,9 +240,9 @@ The flow runs every 24 hours and sends a structured email listing all department
 
 **1. Power Automate — DLP Policy Restriction**
 
-Full Excel-to-email automation was blocked by the university's Data Loss Prevention (DLP) policy (`Policy 19:23:30 10-31-2017`), which restricts the use of the `shared_office365` connector with `shared_excelonlinebusiness` in the same flow. This is a common enterprise security constraint in Microsoft 365 environments.
+Full Excel-to-email automation was blocked by the  Data Loss Prevention (DLP) policy (`Policy 19:23:30 10-31-2017`), which restricts the use of the `shared_office365` connector with `shared_excelonlinebusiness` in the same flow. This is a common enterprise security constraint in Microsoft 365 environments.
 
-In a real corporate environment (such as Siemens Energy), this policy would either be configured to allow the connectors or a Premium connector with proper permissions would be used.
+In a real corporate environment this policy would either be configured to allow the connectors or a Premium connector with proper permissions would be used.
 
 **2. Static Knowledge Base**
 
@@ -223,7 +262,7 @@ From the dashboard analysis:
 - **Engineering** has the highest total spend at $79M but remains within budget
 - **Approved transactions** account for ~50% of all transactions (7,550 out of 15,000)
 - **Travel and Maintenance** are the top expense categories by volume
-- Spend remains relatively stable month-over-month with a slight downward trend in late 2024
+- Spend fluctuates between $11M-$15M monthly with no clear directional trend. Monthly totals vary throughout 2023-2024, with the highest spend in May 2023 ($14.9M) and lowest in February 2023 ($11.2M). Late 2024 shows relatively stable spending around $13M per month, with December 2024 at $13.4M slightly higher than the preceding months. 
 
 ---
 
